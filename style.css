@@ -1,0 +1,54 @@
+
+:root {
+    --primary-color: #b9b9b9;
+    --second-color: #7a1212;
+    --third-color: #000000;
+}
+    .dark-theme{
+    --primary-color: #201f5a;
+    --second-color: #da6c12;
+    --third-color: #9b9797;
+}
+
+body {
+    background-color: var(--primary-color)
+   
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: var(--second-color)
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--third-color)
+}
+
+aside {
+    flex-direction: column;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    margin-bottom: auto;
+}
+
