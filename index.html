@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In Page</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/form.css" />
 </head>
 
 
-<body>
+<body class="container dark-theme">
     <header><h1>Join David's Army Today!!!</h1>
         <h2>Stop the tyrany of the evil flamingos!</h2>
+        <button id="theme-switcher">Light Mode</button>
     </header>
-    <aside>
+    <section>
         <form>
-            <input type="text" first="firstname" placeholder="First name">
-            <input type="text" last="lastname" placeholder="Last Name">
-            <input type="text" email="username" placeholder="Username">
-            <input type="text" secured="password" placeholder="Password">
+            <input type="text" id="username" placeholder="Username">
+            <input type="text" id="blogTitle" placeholder="Blog Title">
+            <input type="text" id="content" placeholder="Content">
         </form>
-    </aside>
+    </section>
     
-    <button>Submit</button>
+    <button id="submitButton">Submit</button>
 
     <section>
         <img src="./images/NoFlamingos.png" class="image" alt="No flamingos allowed sign">
@@ -29,6 +30,11 @@
     
     
     
-    
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/logic.js"></script>
 </body>
+
+<footer>
+    <a href="https://github.com/Dpippin09">David's Portfolio</a>
+</footer>
 </html>
