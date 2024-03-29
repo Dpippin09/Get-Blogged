@@ -1,3 +1,6 @@
+const submitButton = document.getElementById('submitButton');
+
+
 function submitPressed() {
     console.log("submitted");
     const username = document.querySelector('#username').value;
@@ -6,16 +9,13 @@ function submitPressed() {
     console.log(username);
 
     if (
-        username === "" ||
-        blogTitle === "" ||
-        content === "" 
+        username === "" &&
+        blogTitle === "" &&
+        content === ""
     ) {
         alert('Pleas fill out the blog post sections');
         return;
     }
-
-
-
 
     const blogPostData = {
         username: username,
@@ -23,14 +23,8 @@ function submitPressed() {
         content: content.trim(),
     };
 
-    var blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
+    let blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
     console.log(blogPosts);
-
-    if (blogPosts === null) {
-        const emptyArray = [];
-        localStorage.setItem('blogPosts', JSON.stringify(emptyArray));
-        blogPosts = emptyArray;
-    }
 
     blogPosts.push(blogPostData);
 
@@ -41,9 +35,8 @@ function submitPressed() {
 
 }
 
-const submitButton = document.getElementById('submitButton');
 
-submitButton.addEventListener('click', submitPressed); 
+submitButton.addEventListener('click', submitPressed);
 
 
 

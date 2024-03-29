@@ -1,27 +1,36 @@
-function backPressed() {
-    window.location.href = "./index.html";
-}
-
-
 const backButton = document.getElementById('backButton');
-
-backButton.addEventListener('click', backPressed); 
-
-var blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
-console.log(blogPosts);
+const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
+const blogContainer = document.getElementById('blogs')
 
 
-for (const blogPost of blogPosts) {
-    const usernameElement = document.createElement('p');
-    usernameElement.textContent = blogPost.username;
-    document.body.appendChild(usernameElement);
 
-    const blogTitleElement = document.createElement('p');
-    blogTitleElement.setAttribute('style','font-size: 25px;');
-    blogTitleElement.textContent = blogPost.blogTitle;
-    document.body.appendChild(blogTitleElement);
 
-    const contentElement = document.createElement('p');
-    contentElement.textContent = blogPost.content;
-    document.body.appendChild(contentElement);
+
+function runBlogs() {
+    for (const blogPost of blogPosts) {
+
+        const div = document.createElement('div')
+        const usernameElement = document.createElement('p');
+        const blogTitleElement = document.createElement('h2');
+        const contentElement = document.createElement('p');
+
+        usernameElement.textContent = 'Username: ' + blogPost.username;
+        blogTitleElement.textContent = 'Title' + blogPost.blogTitle;
+        contentElement.textContent = blogPost.content;
+
+        blogTitleElement.setAttribute("class", "blogComment")
+        blogTitleElement.setAttribute('style', 'font-size: 25px;');
+
+        div.append( blogTitleElement, contentElement, usernameElement)
+        blogContainer.append(div)
+    }
 }
+
+
+
+runBlogs()
+
+
+
+
+

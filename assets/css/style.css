@@ -42,5 +42,28 @@ button {
     margin-top: 3%;
 }
 
+footer {
+    text-align: center;
+    margin-top: 50%;
+    
+}
+
+
+#content {
+    
+    height: 80px;
+    width: 60%
+}
+
+#blogTitle {
+ width:60%;
+ height: 30px;
+}
+
+#username {
+    width: 40%;
+    height: 30px;
+}
+
 
 
